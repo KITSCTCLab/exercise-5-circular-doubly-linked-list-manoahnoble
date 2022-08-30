@@ -11,24 +11,69 @@ class DoublyCircularLinkedList:
         self.count = 0
 
     def add_at_tail(self, data) -> bool:
-        # Write code here
+        temp=Node()
+        temp.data = data
+        temp.prev = head.prev
+        temp.next = head
 
     def add_at_head(self, data) -> bool:
-        # Write code here
-
+        temp=Node()
+        temp.data = data
+        temp.prev = head.prev
+        temp.next = head
+      
     def add_at_index(self, index, data) -> bool:
-        # Write code here
+        temp=Node()
+        temp.next=index
+        temp.prev=index.prev
+        temp.prev.next=temp
+        index.prev=temp
 
     def get(self, index) -> int:
-        # Write code here
+        temp=Node()
+        temp.self.head
+        count=0
+        i=0
+        if(temp != None):
+            while (True):
+                i += 1
+                if(temp.data == index):
+                    count += 1
+                    break
+                temp = temp.next
+                if(temp == self.head):
+                    break
+            if(count == 1):
+                print(index,"is found at index =", i)
+            else:
+                print(index,"is not found in the list.")
+         else:
+            print("The list is empty.")
 
     def delete_at_index(self, index) -> bool:
-        # Write code here
+        temp=Node()
+        index.prev=index.next
+        index.prev=None
+        index.next=None
 
     def get_previous_next(self, index) -> list:
-        # Write code here
-
-
+        temp=Node()
+        temp.self.head
+        count=0
+        i=0
+        if(temp != None):
+            while (True):
+                i += 1
+                if(temp.data == index):
+                    count += 1
+                    break
+                temp = temp.next
+                if(temp == self.head):
+                    break
+            if(count==1):
+                temp.prev=i-1
+                temp.next=i+1
+        
 # Do not change the following code
 operations = []
 for specific_operation in input().split(','):
