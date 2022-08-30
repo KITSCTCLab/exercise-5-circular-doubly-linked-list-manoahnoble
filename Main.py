@@ -31,22 +31,16 @@ class DoublyCircularLinkedList:
 
     def get(self, index) -> int:
         temp=Node()
-        temp.self.head
-        count=0
-        i=0
-        if(temp != None):
-            while (True):
-                i += 1
-                if(temp.data == index):
-                    count += 1
-                    break
-                temp = temp.next
-                if(temp == self.head):
-                    break
-            if(count == 1):
-                print(index,"is found at index =", i)
-            else:
-                print(index,"is not found in the list.")
+        temp.data=data
+        temp.previous=index
+        temp.next=index.next
+        index.next=temp
+        if index.next==None:
+            end=temp
+        if end==temp:
+            return True
+        else:
+            return False
 
     def delete_at_index(self, index) -> bool:
         temp=Node()
