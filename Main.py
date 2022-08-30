@@ -47,8 +47,6 @@ class DoublyCircularLinkedList:
                 print(index,"is found at index =", i)
             else:
                 print(index,"is not found in the list.")
-         else:
-            print("The list is empty.")
 
     def delete_at_index(self, index) -> bool:
         temp=Node()
